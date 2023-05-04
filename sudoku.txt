@@ -1,0 +1,34 @@
+April 2007
+
+Program sudoku.exe calls a file sudoku.dat which holds a sudoku matrix
+for solving. For empty (unfilled) cells sudoku.dat has "0" (zeros).
+Input format is fixed (two positions for an each number)
+
+Here is an example
+ 0 0 9 8 0 0 0 0 6
+ 0 0 6 0 0 4 0 1 0
+ 4 0 0 0 0 2 0 0 0
+ 0 5 0 0 8 0 0 3 1
+ 0 0 1 0 0 0 5 0 0
+ 2 8 0 0 5 0 0 7 0
+ 0 0 0 2 0 0 0 0 9
+ 0 6 0 7 0 0 1 0 0
+ 5 0 0 0 0 8 6 0 0
+
+Program Sudoku (version April 2007)
+1. reads data from the file "sudoku.dat"
+2. checks the data for consistency and print original matrix
+3. looks for solutions using one or all 3 methods
+   method 1: looks for cells with "one only possible number" and fills
+             that cell in the updated sudoku matrix
+             (enough to find solutions for simple sudokus)
+   method 2: tests various solutions by guessing an answer for a
+             single cell (calls method 1)
+             (enough for more complicated sudokus)
+   method 3: tests various solutions by guessing answers for two cells
+             (calls method 2).
+             (works excellent for the most difficult sudokus)
+4. prints results to the screen including
+   information what method has succeeded.
+
+Alex
